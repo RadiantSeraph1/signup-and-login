@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="css/userdetc.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="sidebar">
+            <h2>Dashboard</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Analytics</a></li>
+                <li><a href="#">Messages</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </nav>
+        <div class="main-content">
+            <header class="header">
+                <div class="profile">
+                    <img id="profile-pic" src="profile.jpg" alt="User Profile" class="profile-pic">
+                    <div class="detailsofuser"><h3 id="username">Welcome, User</h3></div>
+                    <div class="detailsofuser"><p id="email">Email: user@example.com</p></div>
+                    <div class="detailsofuser"><p id="dob">Date of Birth: 01/01/1990</p></div>
+                    <div class="detailsofuser"><p id="location">Location: Earth</p></div>
+                </div>
+                <div class="notifications">
+                    <button id="notificationbutton">Notifications (3)</button>
+                </div>
+            </header>
+            <section class="activity-summary">
+                <h2>Recent Activity</h2>
+                <p>You have 5 new tasks for today.</p>
+            </section>
+            <section class="analytics">
+                <h2>Analytics Overview</h2>
+                <div id="chart"></div>
+            </section>
+        </div>
+    </div>
+    <script src="js/userdet.js"></script>
+</body>
+</html>

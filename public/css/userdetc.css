@@ -1,0 +1,222 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Main Layout */
+body {
+    display: flex;
+    height: 100vh;
+    background-color: #434344;
+    flex-direction: column; /* Column layout for smaller devices */
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    display: flex;
+    width: 100%;
+    flex: 1; /* Flex-grow to take up available space */
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    background-color: #020202;
+    color: #fff;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sidebar ul li a:hover {
+    background-color: #1a2531;
+}
+
+/* Main Content Area */
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Wraps items for smaller screens */
+}
+
+/* Profile Section */
+.profile {
+    display: flex;
+    align-items: center;
+}
+.detailsofuser{
+    border: 1px;
+    padding-right: 10px;
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+/* Activity Summary & Analytics Cards */
+.activity-summary, 
+.analytics {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Chart Section */
+#chart {
+    width: 100%;
+    height: 300px;
+    background-color: #eef2f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #666;
+}
+
+/* MEDIA QUERIES FOR RESPONSIVENESS */
+
+/* For small devices like phones */
+@media (max-width: 768px) {
+    /* Sidebar Adjustment for Mobile */
+    .sidebar {
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .sidebar ul li {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .sidebar ul li a {
+        padding: 8px 10px;
+    }
+
+    /* Main Content full width on mobile */
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+
+    /* Adjust header */
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header h1 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    /* Profile Image smaller */
+    .profile-pic {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Adjusting chart size */
+    #chart {
+        height: 250px;
+        font-size: 16px;
+    }
+}
+
+/* For tablets and medium devices */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Sidebar slightly smaller */
+    .sidebar {
+        width: 200px;
+    }
+
+    /* Reduce padding for main content */
+    .main-content {
+        padding: 20px;
+    }
+
+    /* Smaller header adjustments */
+    .header {
+        padding: 15px;
+        flex-wrap: wrap;
+    }
+
+    /* Profile image */
+    .profile-pic {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* For larger screens (desktops) */
+@media (min-width: 1024px) {
+    .dashboard-container {
+        flex-direction: row;
+    }
+
+    /* Sidebar remains the same */
+    .sidebar {
+        width: 250px;
+    }
+
+    /* Adjusting content layout */
+    .main-content {
+        padding: 20px;
+    }
+
+    /* Larger header */
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    /* Profile picture larger */
+    .profile-pic {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* Chart larger */
+    #chart {
+        height: 350px;
+        font-size: 18px;
+    }
+}

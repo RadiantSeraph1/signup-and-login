@@ -1,0 +1,242 @@
+/* Basic styles for body and forms */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #3b3b3b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: rgb(0,36,29);
+background: linear-gradient(90deg, rgb(126, 221, 202) 0%, rgb(75, 80, 79) 35%, rgb(216, 189, 126) 100%);
+
+}
+
+#formContainer {
+    position: relative;
+    overflow: hidden; /* Hide overflowing elements */
+    width: 100%;
+    max-width: 350px; /* Ensure a max width */
+    padding: 20px;
+    background: rgb(105, 101, 101);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+    margin: 0 20px; /* Add margin for small screens */
+}
+
+.form {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out; /* Transition for opacity */
+    width: 100%;
+}
+
+.hidden {
+    opacity: 0; /* Fade out effect */
+    display: none; /* Hide the form */
+}
+
+/* Optional styling for inputs and buttons */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select,
+input[type="file"] {
+    width: 100%; /* Make form inputs take full width */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensure padding doesn't overflow */
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #06cece;
+}
+
+/* Switch container */
+.toggle-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Styling for the switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000000;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: rgb(23, 24, 24);
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #04eeff;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Styling for date of birth and location inputs */
+label {
+    display: block;
+    margin: 10px 0 5px 0;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 16px;
+}
+
+input[type="date"]:focus,
+select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 8px #06cece;
+}
+
+/* Profile image upload */
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #000000;
+}
+
+input[type="file"]::file-selector-button {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background-color: #06cece;
+}
+
+/* Adjust margin for form fields */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select,
+input[type="file"] {
+    margin-bottom: 15px; /* Adjusting margin for consistency */
+}
+
+/* Styling for placeholder text */
+::placeholder {
+    color: #999;
+}
+
+/* Media query for smaller devices */
+@media (max-width: 600px) {
+    body {
+        align-items: flex-start; /* Allow scroll on small screens */
+        padding: 20px 0;
+    }
+
+    #formContainer {
+        width: 100%;
+        max-width: 100%;
+        padding: 15px;
+        /* box-shadow: none; Remove shadow for smaller screens */
+        /* border-radius: 0; Remove radius on small screens */
+        position: relative;
+        display: flex;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"],
+    select,
+    input[type="file"] {
+        width: 100%;
+    }
+
+    button {
+        padding: 12px;
+    }
+
+    .toggle-container {
+        margin-top: 10px;
+    }
+
+    .switch {
+        width: 50px;
+        height: 28px;
+    }
+
+    .slider:before {
+        height: 20px;
+        width: 20px;
+    }
+
+    input:checked + .slider:before {
+        transform: translateX(22px); /* Adjust for smaller screens */
+    }
+}
+
+/* Media query for tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+    #formContainer {
+        width: 90%;
+        max-width: 500px;
+    }
+}
