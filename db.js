@@ -3,8 +3,8 @@ require('dotenv').config();
 
 const db = mysql.createPool({
     host: 'localhost',    // replace with your actual host
-    user: 'seraph',         // replace with your actual username
-    password: 'darker',   // replace with your actual password
+    user: 'username',         // replace with your actual username
+    password: 'password',   // replace with your actual password
     database: 'signup_login',  // replace with your actual database name
 });
 
