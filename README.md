@@ -68,21 +68,21 @@ Authorization: Bearer <your-jwt-token>
 Project Structure
 
 ├── models/                # Contains user models for MongoDB 
-|
+
 ├── public/                # Public assets (if any)
-|
+
 ├── routes/                # API routes for signup and login or at least it was supposed to 😅
-|
+
 ├── uploads/               # Directory for uploaded files (if applicable)
-|
+
 ├── server.js              # Entry point of the application
-|
+
 ├── generateKey.js         # Utility to generate JWT secret key
-|
+
 ├── db.js                  # MongoDB connection setup
-|
+
 ├── package.json           # Project metadata and dependencies
-|
+
 └── .env                   # Environment variables (not included in version control)
 Scripts
 npm start - Starts the server.
